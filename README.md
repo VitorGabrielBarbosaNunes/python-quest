@@ -1,6 +1,6 @@
 # Python Quest
 
-Jogo educacional em português brasileiro, sem cadastro e sem backend. São **5 mundos, 25 níveis e 50 perguntas**, com aulas, exemplos executáveis, quiz, exercícios de Python real e cinco missões especiais.
+Jogo educacional, sem cadastro e sem backend. São **5 mundos, 25 níveis e 50 perguntas**, com aulas, exemplos executáveis, quiz, exercícios de Python real e cinco missões especiais. Fiz para ter mais conhecimento sobre JavaScript e transmitir conteúdos de aprendizagem sobre o python.
 
 ## Começar
 
