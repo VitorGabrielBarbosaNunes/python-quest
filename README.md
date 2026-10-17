@@ -24,12 +24,9 @@ npm run preview
 
 O comando de preview mostra seu próprio endereço, normalmente na porta 4173. O runtime Python ocupa cerca de 14 MB antes de compressão. Para hospedar, publique `dist/`, incluindo `dist/pyodide/`. O projeto suporta tanto a raiz de um domínio quanto um subdiretório, configurado por `PAGES_BASE_PATH`. Para GitHub Pages, o workflow já configura esse caminho automaticamente. Não abra `index.html` por `file://`: módulos e Workers precisam de HTTP. Nenhum código do aluno é executado no servidor.
 
-## Publicar no GitHub Pages
+## Jogue no site
 
-O projeto já inclui `.github/workflows/pages.yml`. Envie os arquivos para `main`, selecione **GitHub Actions** em **Settings → Pages → Source** e execute o workflow. Os próximos envios para `main` atualizam o site automaticamente após os testes.
-
-Veja o [passo a passo de publicação](docs/GITHUB-PAGES.md), com os comandos de Git e a explicação dos endereços `usuario.github.io/repositorio/`. Para simular esse endereço localmente, execute `npm run test:pages`.
-
+O projeto teve seu deploy, basta acessar https://VitorGabrielBarbosaNunes.github.io/python-quest/
 ## Como jogar
 
 1. Clique em **Jogar · começar aventura**.
