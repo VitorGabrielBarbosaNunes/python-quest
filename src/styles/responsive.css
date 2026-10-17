@@ -1,0 +1,572 @@
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (min-width: 1500px) {
+  main {
+    padding-top: 40px;
+  }
+  .hero {
+    min-height: 320px;
+  }
+  .hero-art {
+    min-height: 265px;
+  }
+  .world-card h3 {
+    font-size: 14px;
+  }
+  .world-card > small {
+    font-size: 10px;
+  }
+  .progress-text {
+    font-size: 11px;
+  }
+  .level-card strong {
+    font-size: 12px;
+  }
+  .level-card small {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1150px) {
+  .sidebar {
+    width: 195px;
+    padding: 28px 12px 0;
+  }
+  .brand {
+    font-size: 23px;
+    padding-left: 8px;
+    gap: 10px;
+  }
+  .brand img {
+    width: 38px;
+    height: 38px;
+  }
+  .workspace {
+    margin-left: 195px;
+  }
+  main {
+    padding: 28px 25px;
+  }
+  .topbar {
+    padding: 0 25px;
+  }
+  .journey-badge {
+    display: none;
+  }
+  .hero {
+    padding: 26px;
+  }
+  .hero-art {
+    transform: scale(0.9);
+  }
+  .hero h2 {
+    font-size: 32px;
+  }
+  .world-grid {
+    gap: 8px;
+  }
+  .world-card {
+    padding: 12px;
+  }
+  .world-card.selected {
+    padding: 11px;
+  }
+  .world-card h3 {
+    font-size: 11px;
+  }
+  .practice-grid {
+    gap: 16px;
+    grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.3fr);
+  }
+  .mission-brief {
+    padding: 19px;
+  }
+  .learn-grid {
+    gap: 18px;
+  }
+  .panel {
+    padding: 24px;
+  }
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+  .guide-tip {
+    display: none;
+  }
+  .section-heading > span {
+    font-size: 9px;
+  }
+}
+@media (max-width: 850px) {
+  .sidebar {
+    width: 78px;
+    padding: 24px 12px;
+  }
+  .brand {
+    padding: 0 4px 28px;
+  }
+  .brand > span,
+  .nav-caption,
+  .nav-item > span,
+  .sidebar-note,
+  .profile,
+  .nav-item.active:after {
+    display: none;
+  }
+  .nav-item {
+    justify-content: center;
+    padding: 14px;
+  }
+  .nav-item .icon {
+    width: 22px;
+    height: 22px;
+  }
+  .workspace {
+    margin-left: 78px;
+  }
+  .hero {
+    grid-template-columns: 1.2fr 0.9fr;
+    padding: 26px;
+  }
+  .hero-art {
+    transform: scale(0.8);
+    margin: 0 -15px;
+  }
+  .floating-code {
+    font-size: 9px;
+  }
+  .hero-footnote {
+    font-size: 9px;
+  }
+  .learn-grid {
+    grid-template-columns: 1fr;
+  }
+  .practice-grid {
+    grid-template-columns: 1fr;
+  }
+  .mission-checklist {
+    display: none;
+  }
+  .hint-box {
+    margin-top: 17px;
+    padding-top: 17px;
+  }
+  .lesson-reading h2 br {
+    display: none;
+  }
+  .world-card h3 {
+    font-size: 10px;
+  }
+  .world-card > small {
+    font-size: 8px;
+  }
+  .world-card-top {
+    margin-bottom: 10px;
+  }
+  .world-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .progress-text {
+    font-size: 8px;
+  }
+  .level-card {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 8px;
+  }
+  .level-card-number {
+    grid-row: auto;
+  }
+  .level-card strong {
+    font-size: 9px;
+  }
+  .breadcrumb {
+    font-size: 11px;
+  }
+  .stats {
+    gap: 14px;
+  }
+  footer span {
+    display: none;
+  }
+  .map-caption {
+    font-size: 8px;
+    padding: 3px 8px;
+    bottom: 8px;
+  }
+  .lesson-top > span {
+    font-size: 9px;
+  }
+  .editor-wrap {
+    height: 330px;
+  }
+  .achievement-grid {
+    gap: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 66px;
+    padding: 4px 8px;
+    border-right: 0;
+    border-top: 1px solid var(--line);
+    background: #fffefaf7;
+    backdrop-filter: blur(12px);
+  }
+  .sidebar .brand,
+  .sidebar-bottom {
+    display: none;
+  }
+  .sidebar nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  .nav-item {
+    width: auto;
+    flex: 1;
+    flex-direction: column;
+    gap: 3px;
+    padding: 7px 5px;
+    margin: 0;
+    border-radius: 8px;
+  }
+  .nav-item > span {
+    display: block;
+    font-size: 8px;
+  }
+  .nav-item .icon {
+    width: 19px;
+    height: 19px;
+  }
+  .workspace {
+    margin: 0;
+    padding-bottom: 66px;
+  }
+  .topbar {
+    padding: 0 19px;
+    min-height: 62px;
+  }
+  .breadcrumb {
+    font-size: 10px;
+  }
+  .breadcrumb > span {
+    margin: 0 6px;
+  }
+  .breadcrumb > strong {
+    font-size: 9px;
+  }
+  .stats {
+    gap: 10px;
+    font-size: 10px;
+  }
+  .stats strong {
+    font-size: 12px;
+  }
+  .stat-label {
+    display: none;
+  }
+  .mobile-settings {
+    display: inline-flex !important;
+    width: 29px;
+    height: 29px;
+  }
+  .mobile-settings .icon {
+    width: 16px;
+    height: 16px;
+  }
+  main {
+    padding: 24px 18px;
+  }
+  .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+  .page-heading h1 {
+    font-size: 25px;
+    line-height: 1.25;
+  }
+  .page-heading p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .page-heading {
+    margin-bottom: 22px;
+  }
+  .hero {
+    padding: 25px 24px;
+    grid-template-columns: 1fr;
+    min-height: 0;
+    margin-bottom: 28px;
+  }
+  .hero-copy {
+    z-index: 1;
+  }
+  .hero h2 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 11px;
+    max-width: 250px;
+  }
+  .hero-label {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+  .hero-art {
+    position: absolute;
+    right: -75px;
+    top: 38px;
+    width: 240px;
+    height: 260px;
+    transform: scale(0.6);
+    transform-origin: center;
+    opacity: 0.55;
+  }
+  .hero-art .floating-code,
+  .hero-art .pip-label,
+  .hero-art .hero-spark {
+    display: none;
+  }
+  .hero .golden {
+    font-size: 12px;
+    padding: 12px 15px;
+  }
+  .hero-footnote {
+    font-size: 8px;
+  }
+  .world-grid {
+    display: flex;
+    overflow-x: auto;
+    padding: 2px 1px 9px;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .world-card {
+    min-width: 143px;
+    scroll-snap-align: start;
+    padding: 14px;
+  }
+  .world-card.selected {
+    padding: 13px;
+  }
+  .world-card h3 {
+    font-size: 12px;
+    min-height: 34px;
+  }
+  .world-card > small {
+    font-size: 8px;
+  }
+  .progress-text {
+    font-size: 9px;
+  }
+  .world-icon {
+    width: 34px;
+    height: 34px;
+  }
+  .section-heading h2 {
+    font-size: 15px;
+  }
+  .section-heading > span {
+    font-size: 8px;
+    text-align: right;
+    max-width: 110px;
+  }
+  .map-section .eyebrow {
+    font-size: 8px;
+    max-width: 240px;
+  }
+  .map-section .section-heading h2 {
+    font-size: 18px;
+  }
+  .map-frame {
+    aspect-ratio: 1000/510;
+  }
+  .map-caption {
+    display: none;
+  }
+  .level-strip {
+    grid-template-columns: 1fr;
+    margin-top: 13px;
+    gap: 5px;
+  }
+  .level-card {
+    grid-template-columns: 28px 1fr auto;
+    padding: 11px 13px;
+    align-items: center;
+    border: 1px solid var(--line);
+    background: #fffefa;
+  }
+  .level-card-number {
+    grid-row: auto;
+    font-size: 12px;
+  }
+  .level-card strong {
+    font-size: 11px;
+  }
+  .level-card small {
+    font-size: 8px;
+  }
+  .level-card .stars {
+    font-size: 12px;
+  }
+  .next-mission {
+    padding: 16px;
+    gap: 11px;
+  }
+  .square-icon {
+    width: 37px;
+    height: 37px;
+  }
+  .next-mission h3 {
+    font-size: 12px;
+  }
+  .next-mission p {
+    font-size: 10px;
+  }
+  .lesson-heading h1 {
+    font-size: 28px;
+  }
+  .lesson-heading p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .lesson-top {
+    align-items: start;
+    margin-bottom: 18px;
+  }
+  .lesson-top > span {
+    font-size: 8px;
+    max-width: 150px;
+    text-align: right;
+  }
+  .lesson-top .text-button {
+    font-size: 10px;
+    padding-top: 0;
+  }
+  .stepper {
+    gap: 5px;
+    margin: 24px 0;
+  }
+  .stepper li {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 9px;
+    padding: 10px 4px;
+  }
+  .stepper .icon {
+    width: 16px;
+    height: 16px;
+  }
+  .panel {
+    padding: 22px;
+  }
+  .lesson-reading h2 {
+    font-size: 22px;
+  }
+  .lesson-reading p {
+    font-size: 14px;
+  }
+  .lesson-reading > .button {
+    width: 100%;
+    font-size: 12px;
+  }
+  .example-code {
+    font-size: 12px;
+  }
+  .quiz-panel h2 {
+    font-size: 21px;
+  }
+  .quiz-option {
+    font-size: 13px;
+    padding: 13px;
+    gap: 10px;
+  }
+  .quiz-panel > .button {
+    width: 100%;
+  }
+  .practice-grid {
+    gap: 17px;
+  }
+  .mission-brief h2 {
+    font-size: 22px;
+  }
+  .mission-brief > p {
+    font-size: 14px;
+  }
+  .editor-wrap {
+    height: 300px;
+  }
+  .editor-wrap textarea,
+  .editor-wrap > pre {
+    font-size: 13px;
+  }
+  .editor-actions {
+    gap: 6px;
+    padding: 10px;
+  }
+  .editor-actions .button {
+    font-size: 10px;
+    padding: 10px;
+  }
+  .editor-help {
+    font-size: 8px;
+  }
+  .input-panel label small {
+    display: block;
+    margin: 4px 0 0;
+  }
+  .output-heading > span {
+    font-size: 8px;
+  }
+  .completion {
+    padding: 25px 20px;
+  }
+  .completion h2 {
+    font-size: 25px;
+  }
+  .completion-actions {
+    flex-direction: column;
+  }
+  .reward-row {
+    gap: 20px;
+    padding: 15px 10px;
+  }
+  .reward-row strong {
+    font-size: 13px;
+  }
+  .reward-row small {
+    font-size: 8px;
+  }
+  .achievement-grid {
+    grid-template-columns: 1fr;
+  }
+  .achievement {
+    padding: 25px;
+  }
+  .storage-warning {
+    padding: 10px 18px;
+  }
+  footer {
+    padding: 20px 18px;
+    font-size: 9px;
+  }
+  .setting-row {
+    font-size: 13px;
+  }
+  .setting-row input[type='range'] {
+    width: 110px;
+  }
+}
