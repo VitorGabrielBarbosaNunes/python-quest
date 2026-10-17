@@ -1,0 +1,30 @@
+// Soluções de referência usadas só nos testes. Não são importadas pelo aplicativo.
+export const solutions = {
+  1: 'print("Olá, Python!")',
+  2: 'print("Portal aberto")\nprint("Vamos aprender!")',
+  3: 'print(7 + 5)',
+  4: 'moedas = 8\nprint(moedas)',
+  5: 'nome = "Lia"\nidade = 16\nhabilidade = "Explorar"\nprint(nome)\nprint(idade)\nprint(habilidade)',
+};
+Object.assign(solutions, {
+  6: 'print(3 * 4)',
+  7: 'moedas = 8\nprint(moedas >= 5)',
+  8: 'nome = input()\nprint("Olá, " + nome)',
+  9: 'quantidade = int(input())\npreco = float(input())\ntotal = quantidade * preco\nprint("Total: " + str(total))',
+  10: 'a = float(input())\nb = float(input())\nprint(a+b)\nprint(a-b)\nprint(a*b)\nprint(a/b)',
+  11: 'moedas = int(input())\nif moedas >= 5:\n    print("Portal aberto")',
+  12: 'idade = int(input())\nif idade >= 12:\n    print("Pode entrar")\nelse:\n    print("Volte depois")',
+  13: 'pontos = int(input())\nif pontos >= 80:\n    print("Ouro")\nelif pontos >= 50:\n    print("Prata")\nelse:\n    print("Bronze")',
+  14: 'energia = int(input())\nchave = input()\nif energia > 0 and chave == "sim":\n    print("Pode passar")\nelse:\n    print("Acesso negado")',
+  15: 'caminho = input()\nequipamento = input()\nif caminho == "floresta":\n    if equipamento == "tocha":\n        print("Tesouro encontrado")\n    else:\n        print("Muito escuro")\nelse:\n    if equipamento == "corda":\n        print("Travessia segura")\n    else:\n        print("Ponte quebrada")',
+  16: 'passo = 1\nwhile passo <= 3:\n    print(passo)\n    passo = passo + 1',
+  17: 'for letra in "SOL":\n    print(letra)',
+  18: 'n = int(input())\nfor numero in range(1, n + 1):\n    print(numero)',
+  19: 'inventario = ["mapa", "corda", "tocha"]\nprint(inventario[0])\nprint(len(inventario))\nfor item in inventario:\n    print(item)',
+  20: 'segredo = 7\nacertou = False\nfor tentativa in range(3):\n    palpite = int(input())\n    if palpite == segredo:\n        acertou = True\n        print("Acertou!")\n        break\n    else:\n        print("Tente de novo")\nif not acertou:\n    print("Fim das tentativas")',
+  21: 'def saudar():\n    print("Olá, viajante!")\nsaudar()',
+  22: 'def dobro(numero):\n    return numero * 2',
+  23: 'def preparar_nome(texto):\n    return texto.strip().upper()',
+  24: 'def somar(a, b):\n    return a + b',
+  25: 'def jogar():\n    moedas = 0\n    for turno in range(3):\n        comando = input()\n        if comando == "explorar":\n            moedas = moedas + 2\n    return moedas\n\ntotal = jogar()\nprint("Moedas: " + str(total))\nif total >= 4:\n    print("Vitória!")\nelse:\n    print("Continue explorando")',
+});
