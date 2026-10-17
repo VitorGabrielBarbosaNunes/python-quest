@@ -1,0 +1,64 @@
+import { test, expect } from '@playwright/test';
+async function toPractice(page) {
+  await page.getByRole('button', { name: 'Jogar · começar aventura' }).click();
+  await page.getByRole('button', { name: 'Entendi, vamos praticar' }).click();
+  await page.getByRole('button', { name: 'C Uma linguagem usada apenas' }).click();
+  await expect(page.locator('#quiz-next')).toBeDisabled();
+  await page.getByRole('button', { name: 'A Uma sequência de instruções' }).click();
+  await page.locator('#quiz-next').click();
+  await page.getByRole('button', { name: 'B Olá, explorador!' }).click();
+  await page.locator('#quiz-next').click();
+}
+test('primeiro nível completo, execução real, salvamento e repetição', async ({ page }) => {
+  const errors = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  await page.goto('./');
+  await expect(page.locator('canvas')).toBeVisible();
+  await toPractice(page);
+  await page.getByLabel('Seu código Python').fill('print("Ainda não")');
+  await page.getByRole('button', { name: 'Verificar resposta' }).click();
+  await expect(page.getByText('Mais uma pequena mudança')).toBeVisible({ timeout: 60000 });
+  await expect(page.locator('#finish-button')).toBeHidden();
+  await page.getByLabel('Seu código Python').fill('print("Olá, Python!")');
+  await page.getByRole('button', { name: 'Executar', exact: true }).click();
+  await expect(page.locator('#program-output')).toHaveText('Olá, Python!\n', { timeout: 60000 });
+  await expect(page.locator('#finish-button')).toBeHidden();
+  await page.getByRole('button', { name: 'Verificar resposta' }).click();
+  await expect(page.locator('#finish-button')).toBeVisible({ timeout: 60000 });
+  await page.locator('#finish-button').click();
+  await expect(page.getByText('+100 XP')).toBeVisible();
+  await expect(page.getByLabel('3 de 3 estrelas')).toBeVisible();
+  await page.reload();
+  await expect(page.locator('.xp')).toContainText('100');
+  await expect(page.locator('[data-action="level"][data-id="2"]')).toBeEnabled();
+  await expect(page.locator('[data-action="level"][data-id="3"]')).toBeDisabled();
+  expect(errors).toEqual([]);
+});
+test('cancelamento, limite de tempo e recuperação do Worker', async ({ page }) => {
+  await page.goto('./');
+  await toPractice(page);
+  await page.getByLabel('Seu código Python').fill('while True:\n    pass');
+  await page.locator('#run-button').click();
+  await page.locator('#cancel-button').click();
+  await expect(page.getByText('Execução interrompida')).toBeVisible();
+  await page.locator('#run-button').click();
+  await expect(page.getByText('O tempo acabou.', { exact: false })).toBeVisible({ timeout: 60000 });
+  await page.getByLabel('Seu código Python').fill('print("Voltei!")');
+  await page.locator('#run-button').click();
+  await expect(page.locator('#program-output')).toHaveText('Voltei!\n', { timeout: 60000 });
+});
+test('interface móvel sem transbordamento e configurações persistentes', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('./');
+  await expect(page.getByRole('button', { name: 'Jogar · começar aventura' })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.getByRole('button', { name: 'Configurações', exact: true }).last().click();
+  await page.getByLabel('Reduzir animações').check();
+  await page.getByLabel('Textos maiores').check();
+  await page.getByRole('button', { name: 'Fechar configurações' }).click();
+  await page.reload();
+  await expect(page.locator('html')).toHaveClass(/reduced-motion/);
+  await toPractice(page);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({ path: 'test-results/mobile-practice.png', fullPage: true });
+});
